@@ -40,8 +40,8 @@ export default function AboutPage() {
           href="/"
           className="flex items-center gap-3 transition-opacity duration-300 ease-out hover:opacity-70"
         >
-          <img src="/DNA-logo.png" alt="" aria-hidden="true" className="h-10 w-auto" />
-          <span className="text-sm font-black tracking-widest text-black">DNA</span>
+          <img src="/DNA-logo.png" alt="" aria-hidden="true" className="h-20 w-auto" />
+          <span className="text-[21px] font-black tracking-widest text-black">DNA</span>
         </Link>
         <Link
           href="/#contact"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { GlobalNavigation } from "./_components/global-navigation";
 import { ContactSection } from "./_components/contact-section";
 
@@ -109,11 +110,14 @@ const serviceSchema = {
 function HeroSection() {
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden">
-      <img
+      <Image
         src="/966.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
       />
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col justify-center px-6 pb-12 pt-24 md:px-12">

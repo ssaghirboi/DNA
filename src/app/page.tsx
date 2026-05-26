@@ -115,13 +115,13 @@ function HeroSection() {
       </h1>
 
       {/* Logo — tight to top, negative margins clip PNG internal whitespace */}
-      <div className="px-6 pt-12 md:px-10 md:pt-14">
+      <div className="px-6 md:px-10">
         <div className="overflow-hidden">
           <img
             src="/DNA-logo-FINAL.png"
             alt="DNA"
             className="w-full"
-            style={{ marginTop: "-16%", marginBottom: "-14%" }}
+            style={{ marginTop: "-44%", marginBottom: "-20%" }}
           />
         </div>
         <div className="flex justify-between pb-3 pt-1">

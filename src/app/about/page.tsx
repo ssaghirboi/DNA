@@ -38,9 +38,9 @@ export default function AboutPage() {
       <header className="flex w-full items-center justify-between border-b border-neutral-200/50 px-6 py-4 md:px-12">
         <Link
           href="/"
-          className="text-xl font-black tracking-tighter text-black transition-colors duration-300 ease-out hover:text-neutral-600"
+          className="flex items-center gap-2.5 transition-opacity duration-300 ease-out hover:opacity-70"
         >
-          DNA
+          <img src="/DNA-logo.png" alt="DNA" className="h-6 w-auto" />
         </Link>
         <Link
           href="/#contact"

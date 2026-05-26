@@ -17,10 +17,10 @@ export function GlobalNavigation() {
     <header className="fixed top-0 z-50 flex w-full items-center justify-between border-b border-neutral-200/50 bg-white/70 px-6 py-4 backdrop-blur-md md:px-12">
       <a
         href="#"
-        className="text-xl font-black tracking-tighter text-black transition-colors duration-300 ease-out hover:text-neutral-600"
+        className="flex items-center gap-2.5 transition-opacity duration-300 ease-out hover:opacity-70"
         onClick={closeMobile}
       >
-        DNA
+        <img src="/DNA-logo.png" alt="DNA" className="h-6 w-auto" />
       </a>
 
       <nav className="hidden items-center gap-10 md:flex" aria-label="Primary">

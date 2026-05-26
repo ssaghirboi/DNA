@@ -10,83 +10,60 @@ const NAV_LINKS = [
 ] as const;
 
 export function GlobalNavigation() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const closeMobile = () => setMobileOpen(false);
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
 
   return (
-    <header className="fixed top-0 z-50 flex w-full items-center justify-between border-b border-neutral-200/50 bg-white/70 px-6 py-4 backdrop-blur-md md:px-12">
-      <a
-        href="#"
-        className="flex items-center gap-3 transition-opacity duration-300 ease-out hover:opacity-70"
-        onClick={closeMobile}
+    <>
+      <button
+        type="button"
+        className="fixed right-6 top-6 z-50 flex flex-col gap-[5px] md:right-12 md:top-8"
+        onClick={() => setOpen((prev) => !prev)}
+        aria-label={open ? "Close menu" : "Open menu"}
+        aria-expanded={open}
       >
-        <img src="/DNA-logo.png" alt="" aria-hidden="true" className="h-20 w-auto" />
-        <span className="text-[21px] font-black tracking-widest text-black">DNA</span>
-      </a>
+        <span
+          className={`block h-px w-6 transition-all duration-300 ease-out ${
+            open ? "translate-y-[7px] rotate-45 bg-white" : "bg-black"
+          }`}
+        />
+        <span
+          className={`block h-px w-6 bg-black transition-all duration-300 ease-out ${
+            open ? "opacity-0" : ""
+          }`}
+        />
+        <span
+          className={`block h-px w-6 transition-all duration-300 ease-out ${
+            open ? "-translate-y-[7px] -rotate-45 bg-white" : "bg-black"
+          }`}
+        />
+      </button>
 
-      <nav className="hidden items-center gap-10 md:flex" aria-label="Primary">
-        {NAV_LINKS.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className="text-sm font-medium text-black transition-colors duration-300 ease-out hover:text-neutral-500"
-          >
-            {link.label}
-          </a>
-        ))}
-      </nav>
-
-      <div className="flex items-center gap-4">
+      <div
+        className={`fixed inset-0 z-40 flex flex-col justify-center bg-black px-8 transition-opacity duration-300 ease-out md:px-16 ${
+          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <nav className="flex flex-col gap-6" aria-label="Primary">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-5xl font-bold tracking-tighter text-white transition-opacity duration-200 hover:opacity-50 md:text-7xl lg:text-8xl"
+              onClick={close}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
         <a
           href="#contact"
-          className="hidden rounded-full bg-black px-5 py-1.5 text-sm font-medium text-white transition-all duration-300 ease-out hover:bg-neutral-800 sm:inline-block"
+          className="mt-14 inline-flex w-fit rounded-full border border-white/40 px-6 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:border-white"
+          onClick={close}
         >
           Let&apos;s Build
         </a>
-
-        <button
-          type="button"
-          className="relative flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
-          aria-expanded={mobileOpen}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          onClick={() => setMobileOpen((prev) => !prev)}
-        >
-          <span
-            className={`block h-px w-5 bg-black transition-all duration-300 ease-out ${
-              mobileOpen ? "translate-y-[3.5px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-px w-5 bg-black transition-all duration-300 ease-out ${
-              mobileOpen ? "-translate-y-[3.5px] -rotate-45" : ""
-            }`}
-          />
-        </button>
       </div>
-
-      {mobileOpen && (
-        <div className="absolute left-0 top-full w-full border-b border-neutral-200/50 bg-white/95 px-6 py-6 backdrop-blur-md md:hidden">
-          <nav className="flex flex-col gap-5" aria-label="Mobile">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-base font-medium text-black transition-colors duration-300 ease-out hover:text-neutral-500"
-                onClick={closeMobile}
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              className="mt-2 inline-flex w-fit rounded-full bg-black px-5 py-2 text-sm font-medium text-white transition-all duration-300 ease-out hover:bg-neutral-800"
-              onClick={closeMobile}
-            >
-              Let&apos;s Build
-            </a>
-          </nav>
-        </div>
-      )}
-    </header>
+    </>
   );
 }

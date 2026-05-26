@@ -109,29 +109,37 @@ const serviceSchema = {
 
 function HeroSection() {
   return (
-    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden">
-      <Image
-        src="/966.jpg"
-        alt=""
-        aria-hidden="true"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col justify-center px-6 pb-12 pt-24 md:px-12">
-        <h1 className="text-4xl font-bold leading-none tracking-tighter text-white md:text-7xl lg:text-8xl">
-          Calgary&apos;s Digital Marketing &amp; Technology Agency
-        </h1>
-        <a
-          href="#work"
-          className="mt-16 inline-block cursor-pointer font-mono text-sm tracking-wider text-white/70 transition-transform duration-300 ease-out hover:translate-y-1 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-        >
-          [ View Selected Work ↓ ]
-        </a>
+    <>
+      <section className="flex min-h-screen flex-col bg-white px-6 pb-10 pt-8 md:px-12">
+        <div className="flex flex-1 items-center">
+          <h1 className="sr-only">Calgary&apos;s Digital Marketing &amp; Technology Agency</h1>
+          <img
+            src="/DNA-logo-FINAL.png"
+            alt="DNA"
+            className="w-full max-w-4xl"
+          />
+        </div>
+        <div className="flex items-end justify-between">
+          <p className="font-mono text-xs uppercase tracking-widest text-neutral-400">
+            Leave your mark.
+          </p>
+          <p className="font-mono text-xs uppercase tracking-widest text-neutral-400">
+            Calgary, AB
+          </p>
+        </div>
+      </section>
+
+      <div className="relative h-[60vh] w-full overflow-hidden">
+        <Image
+          src="/966.jpg"
+          alt="Mountain lake landscape at golden hour"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
       </div>
-    </section>
+    </>
   );
 }
 

@@ -159,31 +159,41 @@ function CapabilitiesSection() {
   return (
     <section
       id="capabilities"
-      className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:px-12"
+      className="relative scroll-mt-24 overflow-hidden px-6 py-24 md:px-12"
     >
-      <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">
-        01 / CORE CAPABILITIES
-      </p>
-      <div className="grid grid-cols-1 border border-neutral-200 md:grid-cols-2">
-        {CAPABILITIES.map((item, index) => (
-          <article
-            key={item.title}
-            className={`group border-neutral-200 p-8 transition-all duration-300 ease-out md:p-12 ${
-              index % 2 === 0 ? "md:border-r" : ""
-            } ${index < 2 ? "border-b md:border-b" : ""} ${
-              index % 2 === 0 && index < CAPABILITIES.length - 1
-                ? "md:border-b"
-                : ""
-            } hover:bg-[#F5F5F7]/60`}
-          >
-            <h2 className="text-lg font-bold tracking-tight text-black md:text-xl">
-              {item.title}
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed tracking-normal text-neutral-600 md:text-base">
-              {item.description}
-            </p>
-          </article>
-        ))}
+      <Image
+        src="/yyc.jpg"
+        alt=""
+        aria-hidden="true"
+        fill
+        sizes="100vw"
+        className="object-cover opacity-25"
+      />
+      <div className="relative mx-auto max-w-7xl">
+        <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">
+          01 / CORE CAPABILITIES
+        </p>
+        <div className="grid grid-cols-1 border border-neutral-200 md:grid-cols-2">
+          {CAPABILITIES.map((item, index) => (
+            <article
+              key={item.title}
+              className={`group border-neutral-200 p-8 transition-all duration-300 ease-out md:p-12 ${
+                index % 2 === 0 ? "md:border-r" : ""
+              } ${index < 2 ? "border-b md:border-b" : ""} ${
+                index % 2 === 0 && index < CAPABILITIES.length - 1
+                  ? "md:border-b"
+                  : ""
+              } hover:bg-white/60`}
+            >
+              <h2 className="text-lg font-bold tracking-tight text-black md:text-xl">
+                {item.title}
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed tracking-normal text-neutral-600 md:text-base">
+                {item.description}
+              </p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

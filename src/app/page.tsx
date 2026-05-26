@@ -109,17 +109,19 @@ const serviceSchema = {
 
 function HeroSection() {
   return (
-    <>
-      <section className="flex min-h-screen flex-col bg-white px-6 pb-10 pt-8 md:px-12">
-        <div className="flex flex-1 items-center">
-          <h1 className="sr-only">Calgary&apos;s Digital Marketing &amp; Technology Agency</h1>
+    <section className="flex h-screen flex-col bg-white">
+      <h1 className="sr-only">Calgary&apos;s Digital Marketing &amp; Technology Agency</h1>
+
+      {/* Logo panel — 45% of viewport */}
+      <div className="flex flex-[45] flex-col px-6 pt-8 pb-4 md:px-12">
+        <div className="flex flex-1 items-center justify-center">
           <img
             src="/DNA-logo-FINAL.png"
             alt="DNA"
-            className="w-full max-w-4xl"
+            className="w-[55vw] max-w-md object-contain"
           />
         </div>
-        <div className="flex items-end justify-between">
+        <div className="flex justify-between">
           <p className="font-mono text-xs uppercase tracking-widest text-neutral-400">
             Leave your mark.
           </p>
@@ -127,9 +129,10 @@ function HeroSection() {
             Calgary, AB
           </p>
         </div>
-      </section>
+      </div>
 
-      <div className="relative h-[60vh] w-full overflow-hidden">
+      {/* 966 image panel — 55% of viewport */}
+      <div className="relative flex-[55] overflow-hidden">
         <Image
           src="/966.jpg"
           alt="Mountain lake landscape at golden hour"
@@ -139,7 +142,7 @@ function HeroSection() {
           className="object-cover"
         />
       </div>
-    </>
+    </section>
   );
 }
 

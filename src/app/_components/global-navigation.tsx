@@ -15,33 +15,47 @@ export function GlobalNavigation() {
 
   return (
     <>
+      {/* 4-bar hamburger — fixed top right */}
       <button
         type="button"
-        className="fixed right-6 top-6 z-50 flex flex-col gap-[5px] md:right-12 md:top-8"
+        className="fixed right-6 top-6 z-50 flex flex-col gap-[5px] md:right-10 md:top-8"
         onClick={() => setOpen((prev) => !prev)}
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
       >
         <span
-          className={`block h-px w-6 transition-all duration-300 ease-out ${
-            open ? "translate-y-[7px] rotate-45 bg-white" : "bg-black"
-          }`}
-        />
-        <span
-          className={`block h-px w-6 bg-black transition-all duration-300 ease-out ${
-            open ? "opacity-0" : ""
+          className={`block h-px transition-all duration-300 ease-out ${
+            open
+              ? "w-6 translate-y-[10px] rotate-45 bg-white"
+              : "w-6 bg-black"
           }`}
         />
         <span
           className={`block h-px w-6 transition-all duration-300 ease-out ${
-            open ? "-translate-y-[7px] -rotate-45 bg-white" : "bg-black"
+            open ? "opacity-0 bg-white" : "bg-black"
+          }`}
+        />
+        <span
+          className={`block h-px transition-all duration-300 ease-out ${
+            open
+              ? "w-6 -translate-y-[10px] -rotate-45 bg-white"
+              : "w-6 bg-black"
+          }`}
+        />
+        {/* 4th bar — shorter */}
+        <span
+          className={`block h-px transition-all duration-300 ease-out ${
+            open ? "w-0 opacity-0" : "w-4 bg-black"
           }`}
         />
       </button>
 
+      {/* Full-screen overlay */}
       <div
         className={`fixed inset-0 z-40 flex flex-col justify-center bg-black px-8 transition-opacity duration-300 ease-out md:px-16 ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          open
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
         }`}
       >
         <nav className="flex flex-col gap-6" aria-label="Primary">

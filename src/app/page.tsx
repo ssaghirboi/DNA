@@ -109,19 +109,22 @@ const serviceSchema = {
 
 function HeroSection() {
   return (
-    <section className="flex h-screen flex-col bg-white">
-      <h1 className="sr-only">Calgary&apos;s Digital Marketing &amp; Technology Agency</h1>
+    <>
+      <h1 className="sr-only">
+        Calgary&apos;s Digital Marketing &amp; Technology Agency
+      </h1>
 
-      {/* Logo panel — 28% of viewport */}
-      <div className="flex flex-[28] flex-col px-6 pt-8 pb-4 md:px-12">
-        <div className="flex flex-1 items-center justify-center overflow-hidden">
+      {/* Logo — tight to top, negative margins clip PNG internal whitespace */}
+      <div className="px-6 pt-12 md:px-10 md:pt-14">
+        <div className="overflow-hidden">
           <img
             src="/DNA-logo-FINAL.png"
             alt="DNA"
-            className="w-full object-contain"
+            className="w-full"
+            style={{ marginTop: "-16%", marginBottom: "-14%" }}
           />
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between pb-3 pt-1">
           <p className="font-mono text-xs uppercase tracking-widest text-neutral-400">
             Leave your mark.
           </p>
@@ -131,8 +134,8 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* 966 image panel — 72% of viewport */}
-      <div className="relative flex-[72] overflow-hidden">
+      {/* 966 — full width, directly below, no gap */}
+      <div className="relative h-[65vh] w-full overflow-hidden">
         <Image
           src="/966.jpg"
           alt="Mountain lake landscape at golden hour"
@@ -142,7 +145,7 @@ function HeroSection() {
           className="object-cover"
         />
       </div>
-    </section>
+    </>
   );
 }
 

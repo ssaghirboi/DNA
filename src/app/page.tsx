@@ -112,8 +112,8 @@ function HeroSection() {
     <section className="flex h-screen flex-col bg-white">
       <h1 className="sr-only">Calgary&apos;s Digital Marketing &amp; Technology Agency</h1>
 
-      {/* Logo panel — 45% of viewport */}
-      <div className="flex flex-[45] flex-col px-6 pt-8 pb-4 md:px-12">
+      {/* Logo panel — 28% of viewport */}
+      <div className="flex flex-[28] flex-col px-6 pt-8 pb-4 md:px-12">
         <div className="flex flex-1 items-center justify-center">
           <img
             src="/DNA-logo-FINAL.png"
@@ -131,8 +131,8 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* 966 image panel — 55% of viewport */}
-      <div className="relative flex-[55] overflow-hidden">
+      {/* 966 image panel — 72% of viewport */}
+      <div className="relative flex-[72] overflow-hidden">
         <Image
           src="/966.jpg"
           alt="Mountain lake landscape at golden hour"

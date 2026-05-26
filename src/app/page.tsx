@@ -114,11 +114,11 @@ function HeroSection() {
 
       {/* Logo panel — 28% of viewport */}
       <div className="flex flex-[28] flex-col px-6 pt-8 pb-4 md:px-12">
-        <div className="flex flex-1 items-center justify-center">
+        <div className="flex flex-1 items-center justify-center overflow-hidden">
           <img
             src="/DNA-logo-FINAL.png"
             alt="DNA"
-            className="w-[55vw] max-w-md object-contain"
+            className="w-full object-contain"
           />
         </div>
         <div className="flex justify-between">

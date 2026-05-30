@@ -210,7 +210,7 @@ function CapabilitiesSection() {
                 index % 2 === 0 && index < CAPABILITIES.length - 1
                   ? "md:border-b"
                   : ""
-              } bg-white/60 hover:bg-white/80`}
+              } bg-white/85 hover:bg-white/95`}
             >
               <h2 className="text-lg font-bold tracking-tight text-black md:text-xl">
                 {item.title}

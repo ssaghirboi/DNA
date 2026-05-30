@@ -204,9 +204,9 @@ function WorkSection() {
         className="object-cover opacity-75"
       />
       <div className="relative mx-auto max-w-7xl">
-        <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">
-          02 / SELECTED EXPERIENCES
-        </p>
+        <h2 className="mb-10 text-5xl font-black tracking-tighter text-blue-500 md:text-6xl lg:text-7xl">
+          WHO WE WORK WITH.
+        </h2>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-12">
           {CASE_STUDIES.map((study) => (
             <article key={study.title} className="space-y-5 bg-white/85 p-6">

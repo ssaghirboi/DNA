@@ -176,12 +176,12 @@ function CapabilitiesSection() {
       className="relative scroll-mt-24 overflow-hidden px-6 py-24 md:px-12"
     >
       <Image
-        src="/yyc.jpg"
+        src="/saddle-dome.png"
         alt=""
         aria-hidden="true"
         fill
         sizes="100vw"
-        className="object-cover opacity-25"
+        className="object-cover opacity-40"
       />
       <div className="relative mx-auto max-w-7xl">
         <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">

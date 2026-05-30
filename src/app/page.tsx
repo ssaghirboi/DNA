@@ -70,6 +70,7 @@ const CASE_STUDIES = [
     metric: "+142% Conversion Rate",
     placeholder: "Case Study 01",
     image: "",
+    href: "",
   },
   {
     category: "Web Design & Development",
@@ -77,6 +78,7 @@ const CASE_STUDIES = [
     metric: "Full Digital Presence Built",
     placeholder: "Case Study 02",
     image: "/ahl-logo-v2.png",
+    href: "https://ahl-ten.vercel.app/",
   },
 ];
 
@@ -242,25 +244,31 @@ function WorkSection() {
       <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-12">
         {CASE_STUDIES.map((study) => (
           <article key={study.title} className="space-y-5">
-            <div className="flex aspect-video items-center justify-center overflow-hidden border border-neutral-200 bg-[#F5F5F7]">
-              {study.image ? (
-                <img
-                  src={study.image}
-                  alt={study.title}
-                  className="h-full w-full object-contain p-8"
-                />
-              ) : (
-                <span className="font-mono text-xs uppercase text-neutral-400">
-                  {study.placeholder}
-                </span>
-              )}
-            </div>
-            <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
-              {study.category}
-            </p>
-            <h2 className="text-2xl font-bold tracking-tight text-black md:text-3xl">
-              {study.title}
-            </h2>
+            {study.href ? (
+              <a href={study.href} target="_blank" rel="noopener noreferrer" className="group block space-y-5">
+                <div className="flex aspect-video items-center justify-center overflow-hidden border border-neutral-200 bg-[#F5F5F7] transition-opacity duration-200 group-hover:opacity-80">
+                  {study.image ? (
+                    <img src={study.image} alt={study.title} className="h-full w-full object-contain p-8" />
+                  ) : (
+                    <span className="font-mono text-xs uppercase text-neutral-400">{study.placeholder}</span>
+                  )}
+                </div>
+                <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">{study.category}</p>
+                <h2 className="text-2xl font-bold tracking-tight text-black underline-offset-4 group-hover:underline md:text-3xl">{study.title}</h2>
+              </a>
+            ) : (
+              <>
+                <div className="flex aspect-video items-center justify-center overflow-hidden border border-neutral-200 bg-[#F5F5F7]">
+                  {study.image ? (
+                    <img src={study.image} alt={study.title} className="h-full w-full object-contain p-8" />
+                  ) : (
+                    <span className="font-mono text-xs uppercase text-neutral-400">{study.placeholder}</span>
+                  )}
+                </div>
+                <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">{study.category}</p>
+                <h2 className="text-2xl font-bold tracking-tight text-black md:text-3xl">{study.title}</h2>
+              </>
+            )}
             <p className="text-3xl font-bold tracking-tighter text-black md:text-4xl">
               {study.metric}
             </p>

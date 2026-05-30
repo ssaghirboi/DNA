@@ -116,7 +116,7 @@ function HeroSection() {
 
       {/* Logo — tight to top, negative margins clip PNG internal whitespace */}
       <div className="px-6 md:px-10">
-        <div className="overflow-hidden">
+        <div className="mx-auto max-w-3xl overflow-hidden">
           <img
             src="/DNA-logo-FINAL.png"
             alt="DNA"

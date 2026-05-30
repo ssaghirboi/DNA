@@ -24,7 +24,7 @@ export function ContactSection() {
         className="absolute inset-0 h-full w-full object-cover opacity-75"
       />
       <div className="relative mx-auto max-w-7xl">
-        <h2 className="mb-10 text-5xl font-black tracking-tighter text-red-500 md:text-6xl lg:text-7xl">
+        <h2 className="mb-10 text-5xl font-black tracking-tighter text-blue-500 md:text-6xl lg:text-7xl">
           Leave your mark.
         </h2>
       <div className="mx-auto max-w-3xl bg-white/85 px-8 py-12 md:px-12">

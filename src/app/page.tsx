@@ -69,14 +69,16 @@ const CASE_STUDIES = [
     title: "The Growth Engine Strategy",
     metric: "+142% Conversion Rate",
     placeholder: "Case Study 01",
+    image: "",
   },
   {
-    category: "Ecosystem Architecture & CRO",
-    title: "Unified Digital Pipeline",
-    metric: "$3.4M Pipeline Engineered",
+    category: "Web Design & Development",
+    title: "Calgary Hockey League",
+    metric: "Full Digital Presence Built",
     placeholder: "Case Study 02",
+    image: "/ahl-logo-v2.png",
   },
-] as const;
+];
 
 /* ─── JSON-LD ───────────────────────────────────────────────────────────── */
 
@@ -240,10 +242,18 @@ function WorkSection() {
       <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-12">
         {CASE_STUDIES.map((study) => (
           <article key={study.title} className="space-y-5">
-            <div className="flex aspect-video items-center justify-center border border-neutral-200 bg-[#F5F5F7]">
-              <span className="font-mono text-xs uppercase text-neutral-400">
-                {study.placeholder}
-              </span>
+            <div className="flex aspect-video items-center justify-center overflow-hidden border border-neutral-200 bg-[#F5F5F7]">
+              {study.image ? (
+                <img
+                  src={study.image}
+                  alt={study.title}
+                  className="h-full w-full object-contain p-8"
+                />
+              ) : (
+                <span className="font-mono text-xs uppercase text-neutral-400">
+                  {study.placeholder}
+                </span>
+              )}
             </div>
             <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
               {study.category}

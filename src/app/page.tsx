@@ -181,7 +181,7 @@ function CapabilitiesSection() {
         aria-hidden="true"
         fill
         sizes="100vw"
-        className="object-cover opacity-50"
+        className="object-cover opacity-75"
       />
       <div className="relative mx-auto max-w-7xl">
         <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">

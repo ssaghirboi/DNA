@@ -186,34 +186,6 @@ function ManifestoSection() {
   );
 }
 
-/* ─── Capabilities ──────────────────────────────────────────────────────── */
-
-function CapabilitiesSection() {
-  return (
-    <section
-      id="capabilities"
-      className="px-6 py-24 md:px-12"
-    >
-      <div className="mx-auto max-w-7xl">
-        <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">
-          01 / CORE CAPABILITIES
-        </p>
-        <div className="divide-y divide-neutral-200">
-          {CAPABILITIES.map((item) => (
-            <div key={item.title} className="grid grid-cols-1 gap-4 py-8 md:grid-cols-2 md:gap-16">
-              <h2 className="text-lg font-bold tracking-tight text-black md:text-xl">
-                {item.title}
-              </h2>
-              <p className="text-sm leading-relaxed text-neutral-600 md:text-base">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ─── Work ──────────────────────────────────────────────────────────────── */
 
@@ -305,7 +277,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <ManifestoSection />
-        <CapabilitiesSection />
         <WorkSection />
         <ContactSection />
       </main>

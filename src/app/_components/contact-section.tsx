@@ -18,7 +18,7 @@ export function ContactSection() {
       className="relative scroll-mt-24 overflow-hidden border-t border-neutral-200 px-6 py-24 text-center md:text-left"
     >
       <img
-        src="/train-pic.jpeg"
+        src="/966.jpg"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover opacity-15"

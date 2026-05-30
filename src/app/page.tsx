@@ -248,6 +248,40 @@ function WorkSection() {
   );
 }
 
+/* ─── Testimonials ──────────────────────────────────────────────────────── */
+
+const TESTIMONIALS = [
+  {
+    quote:
+      "Working with DNA was the smoothest agency experience we've had. They came in with a clear plan, communicated every step of the way, and just handled it. Zero hand-holding required on our end.",
+    category: "Agency Experience",
+  },
+  {
+    quote:
+      "Within 3 months of working with DNA, our website traffic doubled and our Instagram went from dead to our top lead source. They didn't just build us an online presence, they built us one that actually converts.",
+    category: "Online Presence / Growth",
+  },
+] as const;
+
+function TestimonialsSection() {
+  return (
+    <section className="border-t border-neutral-200 bg-[#F5F5F7] px-6 py-24 md:px-12">
+      <div className="mx-auto max-w-7xl grid grid-cols-1 gap-12 md:grid-cols-2">
+        {TESTIMONIALS.map((t) => (
+          <blockquote key={t.category} className="space-y-6">
+            <p className="text-mono text-xs uppercase tracking-wider text-neutral-500">
+              {t.category}
+            </p>
+            <p className="text-xl font-medium leading-relaxed tracking-tight text-neutral-900 md:text-2xl">
+              &ldquo;{t.quote}&rdquo;
+            </p>
+          </blockquote>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /* ─── Footer ────────────────────────────────────────────────────────────── */
 
 function InstitutionalFooter() {
@@ -278,6 +312,7 @@ export default function Home() {
         <HeroSection />
         <ManifestoSection />
         <WorkSection />
+        <TestimonialsSection />
         <ContactSection />
       </main>
       <InstitutionalFooter />

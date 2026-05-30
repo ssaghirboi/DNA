@@ -15,7 +15,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-24 overflow-hidden border-t border-neutral-200 px-6 py-24 text-center md:text-left"
+      className="relative scroll-mt-24 overflow-hidden border-t border-neutral-200 px-6 py-24 md:px-12"
     >
       <img
         src="/mountains.JPG"
@@ -23,11 +23,12 @@ export function ContactSection() {
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover opacity-75"
       />
-      <div className="relative mx-auto max-w-3xl bg-white/85 px-8 py-12 md:px-12">
-      <h2 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-4xl">
-        Leave your mark.
-      </h2>
-      <p className="mb-12 mx-auto max-w-xl leading-relaxed tracking-normal text-neutral-600 md:mx-0">
+      <div className="relative mx-auto max-w-7xl">
+        <h2 className="mb-10 text-5xl font-black tracking-tighter text-red-500 md:text-6xl lg:text-7xl">
+          Leave your mark.
+        </h2>
+      <div className="max-w-3xl bg-white/85 px-8 py-12 md:px-12">
+      <p className="mb-12 leading-relaxed tracking-normal text-neutral-600">
         Share your technological, structural, or marketing challenges. We
         architect bespoke digital ecosystems, from strategy through production.
       </p>
@@ -106,6 +107,7 @@ export function ContactSection() {
           </button>
         </form>
       )}
+      </div>
       </div>
     </section>
   );

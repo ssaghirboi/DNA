@@ -124,7 +124,7 @@ function HeroSection() {
       <div className="px-6 md:px-10">
         <div className="mx-auto max-w-3xl overflow-hidden">
           <img
-            src="/DNA-logo-FINAL.png"
+            src="/DNA-LOGO-LAST.svg"
             alt="DNA"
             className="w-full"
             style={{ marginTop: "-50%", marginBottom: "-45%" }}

@@ -21,7 +21,7 @@ export function ContactSection() {
         src="/966.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover opacity-10"
+        className="absolute inset-0 h-full w-full object-cover opacity-75"
       />
       <div className="relative mx-auto max-w-3xl">
       <h2 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-4xl">

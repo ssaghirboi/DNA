@@ -65,13 +65,13 @@ const CAPABILITIES = [
 
 const CASE_STUDIES = [
   {
-    category: "Full-Stack Dev & Paid Media",
-    title: "The Growth Engine Strategy",
-    subtitle: "",
-    metric: "+142% Conversion Rate",
+    category: "Full-Stack Web Development",
+    title: "Quick Stop Auto",
+    subtitle: "A local Calgary auto shop.",
+    metric: "Full Digital Presence Built",
     placeholder: "Case Study 01",
     image: "",
-    href: "",
+    href: "https://quickstop-three.vercel.app/",
   },
   {
     category: "Web Design & Development",

@@ -27,7 +27,7 @@ export function ContactSection() {
         <h2 className="mb-10 text-5xl font-black tracking-tighter text-red-500 md:text-6xl lg:text-7xl">
           Leave your mark.
         </h2>
-      <div className="max-w-3xl bg-white/85 px-8 py-12 md:px-12">
+      <div className="mx-auto max-w-3xl bg-white/85 px-8 py-12 md:px-12">
       <p className="mb-12 leading-relaxed tracking-normal text-neutral-600">
         Share your technological, structural, or marketing challenges. We
         architect bespoke digital ecosystems, from strategy through production.

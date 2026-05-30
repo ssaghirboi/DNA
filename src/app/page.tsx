@@ -192,39 +192,22 @@ function CapabilitiesSection() {
   return (
     <section
       id="capabilities"
-      className="relative scroll-mt-24 overflow-hidden px-6 py-24 md:px-12"
+      className="px-6 py-24 md:px-12"
     >
-      <Image
-        src="/saddle-dome.png"
-        alt=""
-        aria-hidden="true"
-        fill
-        sizes="100vw"
-        className="object-cover opacity-75"
-      />
-      <div className="relative mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl">
         <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">
           01 / CORE CAPABILITIES
         </p>
-        <div className="grid grid-cols-1 border border-neutral-200 md:grid-cols-2">
-          {CAPABILITIES.map((item, index) => (
-            <article
-              key={item.title}
-              className={`group border-neutral-200 p-8 transition-all duration-300 ease-out md:p-12 ${
-                index % 2 === 0 ? "md:border-r" : ""
-              } ${index < 2 ? "border-b md:border-b" : ""} ${
-                index % 2 === 0 && index < CAPABILITIES.length - 1
-                  ? "md:border-b"
-                  : ""
-              } bg-white/85 hover:bg-white/95`}
-            >
+        <div className="divide-y divide-neutral-200">
+          {CAPABILITIES.map((item) => (
+            <div key={item.title} className="grid grid-cols-1 gap-4 py-8 md:grid-cols-2 md:gap-16">
               <h2 className="text-lg font-bold tracking-tight text-black md:text-xl">
                 {item.title}
               </h2>
-              <p className="mt-4 text-sm leading-relaxed tracking-normal text-neutral-600 md:text-base">
+              <p className="text-sm leading-relaxed text-neutral-600 md:text-base">
                 {item.description}
               </p>
-            </article>
+            </div>
           ))}
         </div>
       </div>
@@ -238,46 +221,56 @@ function WorkSection() {
   return (
     <section
       id="work"
-      className="mx-auto max-w-7xl scroll-mt-24 border-t border-neutral-200 px-6 py-24 md:px-12"
+      className="relative scroll-mt-24 overflow-hidden border-t border-neutral-200 px-6 py-24 md:px-12"
     >
-      <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">
-        02 / SELECTED EXPERIENCES
-      </p>
-      <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-12">
-        {CASE_STUDIES.map((study) => (
-          <article key={study.title} className="space-y-5">
-            {study.href ? (
-              <a href={study.href} target="_blank" rel="noopener noreferrer" className="group block space-y-5">
-                <div className="flex aspect-video items-center justify-center overflow-hidden border border-neutral-200 bg-[#F5F5F7] transition-opacity duration-200 group-hover:opacity-80">
-                  {study.image ? (
-                    <img src={study.image} alt={study.title} className="h-full w-full object-contain p-8" />
-                  ) : (
-                    <span className="font-mono text-xs uppercase text-neutral-400">{study.placeholder}</span>
-                  )}
-                </div>
-                <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">{study.category}</p>
-                <h2 className="text-2xl font-bold tracking-tight text-black underline-offset-4 group-hover:underline md:text-3xl">{study.title}</h2>
-                {study.subtitle && <p className="text-sm leading-relaxed text-neutral-500">{study.subtitle}</p>}
-              </a>
-            ) : (
-              <>
-                <div className="flex aspect-video items-center justify-center overflow-hidden border border-neutral-200 bg-[#F5F5F7]">
-                  {study.image ? (
-                    <img src={study.image} alt={study.title} className="h-full w-full object-contain p-8" />
-                  ) : (
-                    <span className="font-mono text-xs uppercase text-neutral-400">{study.placeholder}</span>
-                  )}
-                </div>
-                <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">{study.category}</p>
-                <h2 className="text-2xl font-bold tracking-tight text-black md:text-3xl">{study.title}</h2>
-                {study.subtitle && <p className="text-sm leading-relaxed text-neutral-500">{study.subtitle}</p>}
-              </>
-            )}
-            <p className="text-3xl font-bold tracking-tighter text-black md:text-4xl">
-              {study.metric}
-            </p>
-          </article>
-        ))}
+      <Image
+        src="/saddle-dome.png"
+        alt=""
+        aria-hidden="true"
+        fill
+        sizes="100vw"
+        className="object-cover opacity-75"
+      />
+      <div className="relative mx-auto max-w-7xl">
+        <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">
+          02 / SELECTED EXPERIENCES
+        </p>
+        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-12">
+          {CASE_STUDIES.map((study) => (
+            <article key={study.title} className="space-y-5 bg-white/85 p-6">
+              {study.href ? (
+                <a href={study.href} target="_blank" rel="noopener noreferrer" className="group block space-y-5">
+                  <div className="flex aspect-video items-center justify-center overflow-hidden border border-neutral-200 bg-[#F5F5F7] transition-opacity duration-200 group-hover:opacity-80">
+                    {study.image ? (
+                      <img src={study.image} alt={study.title} className="h-full w-full object-contain p-8" />
+                    ) : (
+                      <span className="font-mono text-xs uppercase text-neutral-400">{study.placeholder}</span>
+                    )}
+                  </div>
+                  <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">{study.category}</p>
+                  <h2 className="text-2xl font-bold tracking-tight text-black underline-offset-4 group-hover:underline md:text-3xl">{study.title}</h2>
+                  {study.subtitle && <p className="text-sm leading-relaxed text-neutral-500">{study.subtitle}</p>}
+                </a>
+              ) : (
+                <>
+                  <div className="flex aspect-video items-center justify-center overflow-hidden border border-neutral-200 bg-[#F5F5F7]">
+                    {study.image ? (
+                      <img src={study.image} alt={study.title} className="h-full w-full object-contain p-8" />
+                    ) : (
+                      <span className="font-mono text-xs uppercase text-neutral-400">{study.placeholder}</span>
+                    )}
+                  </div>
+                  <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">{study.category}</p>
+                  <h2 className="text-2xl font-bold tracking-tight text-black md:text-3xl">{study.title}</h2>
+                  {study.subtitle && <p className="text-sm leading-relaxed text-neutral-500">{study.subtitle}</p>}
+                </>
+              )}
+              <p className="text-3xl font-bold tracking-tighter text-black md:text-4xl">
+                {study.metric}
+              </p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

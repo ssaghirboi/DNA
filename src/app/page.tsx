@@ -127,7 +127,7 @@ function HeroSection() {
             src="/DNA-LOGO-LAST.svg"
             alt="DNA"
             className="w-full"
-            style={{ marginTop: "-10%", marginBottom: "-9%" }}
+            style={{ marginTop: "-15%", marginBottom: "-12%" }}
           />
         </div>
         <div className="flex justify-between pb-3 pt-1">

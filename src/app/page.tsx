@@ -156,7 +156,7 @@ function ManifestoSection() {
     <section className="border-y border-neutral-200/60 bg-[#F5F5F7] px-6 py-24 md:px-12 md:py-36">
       <div className="mx-auto max-w-7xl grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-24">
         <div>
-          <h2 className="text-6xl font-black tracking-tighter text-black md:text-7xl lg:text-8xl">
+          <h2 className="whitespace-nowrap text-5xl font-black tracking-tighter text-purple-600 md:text-6xl lg:text-7xl">
             WHAT WE DO.
           </h2>
           <p className="mt-8 max-w-sm text-base leading-relaxed text-neutral-600">

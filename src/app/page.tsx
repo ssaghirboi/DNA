@@ -67,6 +67,7 @@ const CASE_STUDIES = [
   {
     category: "Full-Stack Dev & Paid Media",
     title: "The Growth Engine Strategy",
+    subtitle: "",
     metric: "+142% Conversion Rate",
     placeholder: "Case Study 01",
     image: "",
@@ -74,7 +75,8 @@ const CASE_STUDIES = [
   },
   {
     category: "Web Design & Development",
-    title: "Calgary Hockey League",
+    title: "AHL",
+    subtitle: "A local hockey league right here in Calgary.",
     metric: "Full Digital Presence Built",
     placeholder: "Case Study 02",
     image: "/ahl-logo-v2.png",
@@ -255,6 +257,7 @@ function WorkSection() {
                 </div>
                 <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">{study.category}</p>
                 <h2 className="text-2xl font-bold tracking-tight text-black underline-offset-4 group-hover:underline md:text-3xl">{study.title}</h2>
+                {study.subtitle && <p className="text-sm leading-relaxed text-neutral-500">{study.subtitle}</p>}
               </a>
             ) : (
               <>
@@ -267,6 +270,7 @@ function WorkSection() {
                 </div>
                 <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">{study.category}</p>
                 <h2 className="text-2xl font-bold tracking-tight text-black md:text-3xl">{study.title}</h2>
+                {study.subtitle && <p className="text-sm leading-relaxed text-neutral-500">{study.subtitle}</p>}
               </>
             )}
             <p className="text-3xl font-bold tracking-tighter text-black md:text-4xl">

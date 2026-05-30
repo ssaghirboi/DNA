@@ -181,7 +181,7 @@ function CapabilitiesSection() {
         aria-hidden="true"
         fill
         sizes="100vw"
-        className="object-cover opacity-40"
+        className="object-cover opacity-50"
       />
       <div className="relative mx-auto max-w-7xl">
         <p className="mb-10 font-mono text-xs uppercase tracking-wider text-neutral-500">
@@ -197,7 +197,7 @@ function CapabilitiesSection() {
                 index % 2 === 0 && index < CAPABILITIES.length - 1
                   ? "md:border-b"
                   : ""
-              } hover:bg-white/60`}
+              } bg-white/60 hover:bg-white/80`}
             >
               <h2 className="text-lg font-bold tracking-tight text-black md:text-xl">
                 {item.title}

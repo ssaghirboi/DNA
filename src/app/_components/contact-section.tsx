@@ -15,8 +15,15 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-3xl scroll-mt-24 border-t border-neutral-200 px-6 py-24 text-center md:text-left"
+      className="relative scroll-mt-24 overflow-hidden border-t border-neutral-200 px-6 py-24 text-center md:text-left"
     >
+      <img
+        src="/train-pic.jpeg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover opacity-15"
+      />
+      <div className="relative mx-auto max-w-3xl">
       <h2 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-4xl">
         Leave your mark.
       </h2>
@@ -99,6 +106,7 @@ export function ContactSection() {
           </button>
         </form>
       )}
+      </div>
     </section>
   );
 }

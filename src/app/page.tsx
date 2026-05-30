@@ -154,15 +154,28 @@ function HeroSection() {
 function ManifestoSection() {
   return (
     <section className="border-y border-neutral-200/60 bg-[#F5F5F7] px-6 py-24 md:px-12 md:py-36">
-      <p className="mx-auto max-w-5xl text-2xl font-medium leading-snug tracking-tight text-neutral-900 md:text-4xl">
-        We reject the fragmented approach of legacy marketing agencies. True
-        modern dominance requires a singular architectural foundation. DNA acts
-        as both strategic pilots and master engineers, consulting on
-        market-moving strategies and building the entire technical network from
-        scratch. No templates. No shortcuts. We build the infrastructure that
-        allows your enterprise to scale seamlessly and leave a permanent,
-        undeniable mark.
-      </p>
+      <div className="mx-auto max-w-7xl grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-24">
+        <div>
+          <h2 className="text-6xl font-black tracking-tighter text-black md:text-7xl lg:text-8xl">
+            WHAT WE DO.
+          </h2>
+          <p className="mt-8 max-w-sm text-base leading-relaxed text-neutral-600">
+            We act as both strategic pilots and master engineers, consulting on
+            market-moving strategies and building the entire technical network
+            from scratch. No templates. No shortcuts.
+          </p>
+        </div>
+        <div className="flex flex-col justify-center divide-y divide-neutral-300">
+          {CAPABILITIES.map((cap) => (
+            <p
+              key={cap.title}
+              className="py-5 font-mono text-sm uppercase tracking-widest text-neutral-800 md:text-base"
+            >
+              {cap.title}
+            </p>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
